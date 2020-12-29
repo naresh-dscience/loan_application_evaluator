@@ -74,7 +74,7 @@ def predict():
             se_n = 1
             se_y = 0
 
-        if credithistory == '0':
+        if credithistory == 'No depts Paid':
             ch_0 = 1
             ch_1 = 0
         else:
@@ -121,9 +121,9 @@ def predict():
 
 
         if prediction==0:
-            return render_template('index.html',prediction_text="Sorry, your loan application is Rejected.")
+            return render_template('index.html',prediction_neg="Sorry, your loan application is Rejected.")
         else:
-            return render_template('index.html',prediction_text="Congratulations!!!, your loan application is Approved!!!")
+            return render_template('index.html',prediction_pos="Congratulations!!! your loan application is Approved!")
     else:
         return render_template('index.html')
 
