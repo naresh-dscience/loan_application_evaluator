@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoanAppln</title>
+
+</head>
+
+<body>
+	
+    <div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Loan Application Evaluator</h2>
+            <h3>Loan Amount</h3><input id="third" name="loanamount" required="required">
+            <h3>Loan Amount Term</h3><input id="fourth" name="loanamountterm" required="required">
+			<h3>Applicant Income</h3><input id="first" name="applicantincome" type="number ">
+            <h3>Coapplicant Income</h3><input id="second" name="coapplicantincome" required="required">
+            <h3>Gender</h3><select name="gender" id="resea" required="required">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <h3>Married?</h3><select name="married" id="research" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+			<h3>Any Dependents?</h3><select name="dependents" id="fuel" required="required">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+				<option value="3+">3+</option>
+            </select>
+            
+			<h3>Education</h3><select name="education" id="research" required="required">
+                <option value="Graduate">Graduate</option>
+                <option value="No Graduate">No Graduate</option>
+            </select>
+			<h3>Self Employed?</h3><select name="selfemployed" id="research" required="required">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+			<h3>Credit History (1- has all debts paid, 0- not paid)</h3><select name="credithistory" id="research" required="required">
+                <option value="0">0</option>
+                <option value="1">1</option>
+            </select>
+			<h3>Property Area</h3><select name="propertyarea" id="research" required="required">
+                <option value="Urban">Urban</option>
+                <option value="SemiUrban">SemiUrban</option>
+				<option value="Rural">Rural</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Evaluate the Loan Application</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: White;
+            text-align: left;
+            padding: 5px;
+			padding: 1; 
+			margin: 1;
+			background-image: url('https://cdn.hswstatic.com/gif/loan-personal.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			
+        }
+		
+        
+        #research {
+            font-size: 1000px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 15px;
+        }
+        
+        #fuel:hover {
+            background-color: white;
+        }
+        
+        #research {
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 15px;
+        }
+        
+        #research:hover {
+            background-color: white;
+        }
+        
+        #resea {
+            width: 120px;
+            height: 30px;
+            text-align: left;
+            border-radius: 14px;
+            font-size: 15px;
+        }
+        
+        #resea:hover {
+            background-color: white;
+        }
+        
+        #sub {
+            width: 250px;
+            height: 50px;
+            text-align: center;
+            border-radius: 24px;
+            font-size: 15px;
+			color: white;
+			background-color: green;
+        }
+        
+        #sub:hover {
+            background-color: darkgreen;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
