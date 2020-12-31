@@ -28,10 +28,10 @@ Training and test data are available in the links below:
 
 ## Approach
 Following steps are performed:
-1. Read the data and perform necessary cleaning and EDA.
-2. Training various models and tune it.
-3. Select best performing model and serialize it using pickle.
-4. Build an webapp using Flask framework.
+1. Read the data and perform necessary cleaning and EDA. (Loan_Application.ipynb)
+2. Training various models and tune it. (Loan_Application.ipynb)
+3. Select best performing model and serialize it using pickle. (Loan_Application.ipynb)
+4. Build an webapp using Flask framework. (app.py)
 5. Host using Heroku, a Platform as a service.
 
 ## Website
