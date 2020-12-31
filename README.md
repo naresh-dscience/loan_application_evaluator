@@ -45,5 +45,5 @@ https://loanapplication-evaluator.herokuapp.com/
 
 
 <p align="center">
-  <img width="460" src="images/website.JPG">
+  <img src="images/website.JPG">
 </p>
