@@ -34,6 +34,9 @@ Following steps are performed:
 4. Build an webapp using Flask framework. (app.py)
 5. Host using Heroku, a Platform as a service.
 
+## Outcome
+Based on the data entered on the website and ML Model predicts the whether **Loan Application** is **Approved** or **Rejected**.
+
 ## Website
 
 Below is the website hosted in Heroku.
@@ -41,3 +44,6 @@ Below is the website hosted in Heroku.
 https://loanapplication-evaluator.herokuapp.com/
 
 
+<p align="center">
+  <img width="460" src="images/website.JPG">
+</p>
